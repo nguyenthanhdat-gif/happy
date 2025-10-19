@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc mừng 20/10 💖</title>
+  <style>
+   body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffeef5;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.card {
+  width: 350px;
+  height: 240px; /* tăng chiều cao để nút không bị cắt */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite;
+  padding: 20px 10px 30px; /* thêm khoảng trống dưới */
+}
+
+.card h2 {
+  color: #ff6fae;
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.card p {
+  color: #444;
+  font-size: 15px;
+  margin: 10px 20px 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6fae;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  background: #ff4f94;
+  transform: scale(1.05);
+}
+
+    .heart {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: #ff6fae;
+      transform: rotate(45deg);
+      animation: rise 6s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: #ff6fae;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -9px; left: 0;
+    }
+
+    .heart::after {
+      left: -9px; top: 0;
+    }
+
+    .heart:nth-child(1) { left: 20%; bottom: -20px; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 50%; bottom: -40px; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 80%; bottom: -30px; animation-delay: 4s; }
+
+    @keyframes rise {
+      0% { transform: translateY(0) rotate(45deg); opacity: 0.9; }
+      100% { transform: translateY(-300px) rotate(45deg); opacity: 0; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ----- TRANG CHÚC MỪNG ----- */
+    .container {
+      display: none;
+      max-width: 800px;
+      margin: 60px auto;
+      background-color: #ffffffcc;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-style: italic;
+      color: #888;
+    }
+
+    .floating {
+      position: fixed;
+      top: 100%;
+      font-size: 24px;
+      animation: floatUp linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 20px; }
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Trang đầu -->
+  <div class="card" id="cardPage">
+    <h2>💝 Happy Day 💝</h2>
+    <p>You are special and loved.<br>Wishing you lots of happiness today and always!</p>
+    <div class="btn" onclick="showMessage()">Open Surprise</div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <!-- Trang chúc mừng -->
+  <div class="container" id="messagePage">
+    <h1>🌸 Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌸</h1>
+    <p>Hôm nay là 20/10 – Ngày Phụ nữ Việt Nam, một ngày đặc biệt để tôn vinh những cô gái tuyệt vời như bạn.</p>
+    <p>Tôi muốn gửi đến bạn lời chúc chân thành nhất:</p>
+    <p>Chúc bạn luôn xinh đẹp, rạng rỡ, tự tin và tràn đầy năng lượng tích cực trong mỗi ngày.</p>
+    <p>Chúc bạn 8386, vạn sự như ý, triệu sự như mơ, tỷ sự bất ngờ và ngập tràn hạnh phúc.</p>
+    <p>Cảm ơn bạn vì luôn là một người dễ thương, tốt bụng và mang lại niềm vui cho mọi người xung quanh.</p>
+    <p>Mong rằng hôm nay bạn sẽ nhận được thật nhiều lời chúc, những món quà ý nghĩa, và hơn hết là cảm thấy hạnh phúc vì có rất nhiều người luôn trân trọng cậu.</p>
+    <p>Chúc bạn có một ngày 20/10 thật đáng nhớ — ngập tràn hoa, nụ cười và niềm vui.</p>
+    <div class="footer">— Với tất cả yêu thương 💖</div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('cardPage').style.display = 'none';
+      document.body.style.background = 'linear-gradient(to right, #ffe6f0, #fff0f5)';
+      document.getElementById('messagePage').style.display = 'block';
+
+      // Tạo hoa và tim bay lên
+      const symbols = ['💖', '🌸', '💐', '🌷', '❤️', '🌹'];
+      const num = 30;
+      for (let i = 0; i < num; i++) {
+        const el = document.createElement('div');
+        el.className = 'floating';
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = 5 + Math.random() * 5 + 's';
+        el.style.fontSize = 20 + Math.random() * 20 + 'px';
+        el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+        document.body.appendChild(el);
+      }
+    }
+  </script>
+</body>
+</html>
